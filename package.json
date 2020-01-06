@@ -1,0 +1,9 @@
+{
+  "name": "iTools-plugin-template",
+  "version": "1.0.0",
+  "description": "iTools插件开发模板，支持直接打包为插件压缩包。",
+  "main": "index.js",
+  "author": "康兵奎",
+  "license": "MIT",
+  "private": false
+}
