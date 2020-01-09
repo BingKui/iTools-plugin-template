@@ -1,0 +1,175 @@
+// flex
+.flex() {
+    display: flex;
+}
+
+.flex-column() {
+    .flex();
+    flex-direction: column;
+}
+
+.flex-center() {
+    .flex();
+    justify-content: center;
+    align-items: center;
+}
+.flex-vertical-center() {
+    .flex();
+    align-items: center;
+}
+
+.flex-horizontal-center() {
+    .flex();
+    justify-content: center;
+}
+
+.flex-row-center() {
+    .flex-center();
+    flex-direction: row;
+}
+
+.flex-column-center() {
+    .flex-center();
+    flex-direction: column;
+}
+.flex-row-between() {
+    .flex();
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-column-between() {
+    .flex();
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// text-align
+.t-l() {
+    text-align: left;
+}
+
+.t-r() {
+    text-align: right;
+}
+
+.t-c() {
+    text-align: center;
+}
+
+// margin & padding
+.m(@num) {
+    margin: @num * 1px;
+}
+
+.m-t(@num) {
+    margin-top: @num * 1px;
+}
+
+.m-b(@num) {
+    margin-bottom: @num * 1px;
+}
+
+.m-r(@num) {
+    margin-right: @num * 1px;
+}
+
+.m-l(@num) {
+    margin-left: @num * 1px;
+}
+
+.m-v(@num) {
+    .m-t(@num);
+    .m-b(@num);
+}
+
+.m-h(@num) {
+    .m-l(@num);
+    .m-r(@num);
+}
+
+.p(@num) {
+    padding: @num * 1px;
+}
+
+.p-t(@num) {
+    padding-top: @num * 1px;
+}
+
+.p-b(@num) {
+    padding-bottom: @num * 1px;
+}
+
+.p-r(@num) {
+    padding-right: @num * 1px;
+}
+
+.p-l(@num) {
+    padding-left: @num * 1px;
+}
+
+.p-v(@num) {
+    .p-t(@num);
+    .p-b(@num);
+}
+
+.p-h(@num) {
+    .p-l(@num);
+    .p-r(@num);
+}
+
+.text-overflow () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-overflow-line (@num) {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @num;
+    overflow: hidden;
+}
+
+.clearfix () {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+// 滚动相关
+.scroll-x() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-y() {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+.linear-right-top(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right top, @colorOne, @colorTwo);
+}
+.linear-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to bottom, @colorOne, @colorTwo);
+}
+.linear-right-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right bottom, @colorOne, @colorTwo);
+}
+.linear-right(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right, @colorOne, @colorTwo);
+}
+.linear-background-color(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right , @colorOne, @colorTwo);
+}
